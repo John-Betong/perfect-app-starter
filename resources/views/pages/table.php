@@ -1,3 +1,6 @@
+<h1>Framework HTML Table Example</h1>
+<a href="/">Back</a>
+
 <?php
 
 use PerfectApp\Html\HtmlTable;
