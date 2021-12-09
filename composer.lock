@@ -1,0 +1,34 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "166b51306050027d47770f497672fd6d",
+    "packages": [
+        {
+            "name": "krubio/perfect-app-framework",
+            "version": "3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benanamen/perfect-app-framework.git",
+                "reference": "origin/master"
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-pdo": "*",
+        "ext-ctype": "*",
+        "ext-openssl": "*",
+        "ext-json": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

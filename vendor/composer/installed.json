@@ -1,0 +1,19 @@
+{
+    "packages": [
+        {
+            "name": "krubio/perfect-app-framework",
+            "version": "3.0",
+            "version_normalized": "3.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benanamen/perfect-app-framework.git",
+                "reference": "origin/master"
+            },
+            "type": "library",
+            "installation-source": "source",
+            "install-path": "../krubio/perfect-app-framework"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
