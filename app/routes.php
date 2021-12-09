@@ -12,6 +12,13 @@ $router->get('contact', 'Pages\PagesController@contact');
 $router->get('table', 'Pages\PagesController@table');
 
 //----------------------------------------------------------------------------------------
+//  Registration Routes
+//----------------------------------------------------------------------------------------
+
+$router->get('register', 'Auth\RegisterController@create');
+$router->post('register', 'Auth\RegisterController@store');
+
+//----------------------------------------------------------------------------------------
 //  Admin Routes
 //----------------------------------------------------------------------------------------
 
