@@ -21,6 +21,19 @@ class PagesController
         view('layouts/layout', ['templatePage' => 'pages/contact','company' => $company]);
     }
 
+    //----------------------------------------------------------------------------------------
+    // Framework Examples
+    //----------------------------------------------------------------------------------------
+
+    final public function table(): void
+    {
+        view('layouts/layout', ['templatePage' => 'pages/table']);
+    }
+
+    //----------------------------------------------------------------------------------------
+    // TO DO
+    //----------------------------------------------------------------------------------------
+
     final public function settings(): void
     {
         view('layouts/layout', ['templatePage' => 'admin/settings']);
@@ -30,4 +43,7 @@ class PagesController
     {
         view('layouts/layout', ['templatePage' => 'admin/errors']);
     }
+
+
+
 }
