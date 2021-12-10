@@ -41,7 +41,7 @@ function redirect(string $path): void
 function view(string $pageName, array $templateData = [])
 {
     extract($templateData, EXTR_OVERWRITE);
-    require BASEDIR . "../resources/views/$pageName.php";
+    require BASEDIR . "/resources/views/$pageName.php";
 }
 
 /**
@@ -111,7 +111,7 @@ function html_escape(string &$unsafe_data): string
 
 function custom_exception(object $exception): void
 {
-    require BASEDIR . './resources/views/partials/header.php';
+    require BASEDIR . '/resources/views/partials/header.php';
     echo '<div class="danger col-md-12"><b>Fatal Error!</b>';
 
     $error_msg = 'DATE: ' . MYSQL_DATETIME_TODAY . "\nERROR: " . $exception->getMessage() . "\nFILE: " . $exception->getFile() . ' on line ' . $exception->getLine() . "\n\nSTACK TRACE\n" . $exception->getTraceAsString() . "\n";
