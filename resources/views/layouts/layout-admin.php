@@ -14,7 +14,7 @@ if (!isset($_SESSION['login']))
 // Make sure user exists in DB for Session. Admin may have deleted user.
 isValidUser();
 
-require '../resources/views/partials/header.php';
+require '../resources/views/partials/header-admin.php';
 require '../resources/views/partials/navbar.php';
 ?>
     <div class="container-fluid">

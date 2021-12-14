@@ -52,21 +52,24 @@ $router->get('activate', 'Auth\ActivationController@activate');
 // Authentication Routes...
 //----------------------------------------------------------------------------------------
 
-/*$router->get('login', 'Auth\LoginController@showlogin');
+$router->get('login', 'Auth\LoginController@showlogin');
 $router->post('login', 'Auth\LoginController@dologin');
-$router->get('logout', 'Auth\LoginController@logout');*/
+$router->get('logout', 'Auth\LoginController@logout');
 
 //----------------------------------------------------------------------------------------
 //  Admin Routes
 //----------------------------------------------------------------------------------------
 
+$router->get('dashboard', 'Pages\PagesController@dashboard');
 $router->get('settings', 'Pages\PagesController@settings');
 $router->get('errors', 'Pages\PagesController@errors');
 $router->get('list-logins', 'Admin\ListLoginsController@index');
 
 //----------------------------------------------------------------------------------------
-// Framework Example Routes
+// API Routes
 //----------------------------------------------------------------------------------------
 
-$router->get('table', 'Pages\PagesController@table');
-$router->get('flash', 'Pages\PagesController@flash');
+$router->get('v1', 'ApiUsers@index');
+
+
+

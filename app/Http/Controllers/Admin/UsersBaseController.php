@@ -35,7 +35,7 @@ class UsersBaseController
     /**
      * @var string
      */
-    protected string $layoutPath = 'layouts/layout';
+    protected string $layoutPath = 'layouts/layout-admin';
 
     /**
      * @var string

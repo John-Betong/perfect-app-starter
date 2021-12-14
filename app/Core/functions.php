@@ -45,6 +45,60 @@ function view(string $pageName, array $templateData = [])
 }
 
 /**
+ * Displays SQL Query & Parameters
+ *
+ * @param $stmt
+ */
+function show_debug_params(object $stmt): void
+{
+    echo '<div class="info">';
+    echo $stmt->debugDumpParams();
+    echo '</div>';
+}
+
+/**
+ * Force logout if logged in user has been deleted from DB
+ * Called in layout-admin.php
+ */
+function isValidUser(): void
+{
+    global $pdo;// TODO: Get rid of global. Just a quickfix to test function
+    $sql = "SELECT EXISTS(SELECT * FROM users WHERE user_id = ?) as isvalid";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$_SESSION['user_id']]);
+    $row = $stmt->fetch();
+
+    if ($row['isvalid'] === 0)
+    {
+        redirect('login');
+    }
+}
+
+/**
+ * Validates User Supplied - Url Manipulation Protection
+ *
+ * Checks whether user supplied primary key (from URL) matches with paired user Id in Database.
+ *
+ * @param PDO $pdo
+ * @param string $primaryKey
+ * @param string $id
+ * @param string $table
+ * @param int $userId
+ */
+function isValidId(PDO $pdo, string $primaryKey, string $id, string $table, $userId): void
+{
+    $sql = "SELECT EXISTS(SELECT * FROM $table WHERE $primaryKey = ? AND owned_by = ?) as isvalid";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$id, $userId]);
+    $row = $stmt->fetch();
+
+    if ($row['isvalid'] === 0)
+    {
+        throw new InvalidArgumentException('Invalid Id - You cannot Edit a record you do not own.');
+    }
+}
+
+/**
  * Check error log file exists/writable
  */
 function check_error_log(): string
@@ -54,6 +108,51 @@ function check_error_log(): string
         return "<div class='success'>The error log file exists and is writeable<br>" . ERROR_LOG_PATH . " </div>\n";
     }
     return "<div class='danger'>The error log file does not exist or is not writable<br>" . ERROR_LOG_PATH . "</div>\n";
+}
+
+/**
+ * Display Add Record Button
+ *
+ * @param string $action_title
+ * @param string $url
+ * @param string $button_text
+ */
+function add_record_button(string $action_title, string $url, string $button_text): void
+{
+    ?>
+    <p style="font-size:21px"><?= ucwords($action_title) ?></p>
+    <p>
+        <a href="<?= $url ?>" class="btn btn-primary" role="button">&#10133; Add <?= ucwords($button_text) ?></a>
+    </p>
+    <?php
+}
+
+/**
+ * @param string $table_name
+ * @param int $id
+ */
+function edit_link(string $table_name, int $id): void
+{
+    ?>
+    <td>
+        <a href="/edit-<?= $table_name ?>?id=<?= $id ?>"
+           class="btn btn-warning btn-sm" role="button">Edit</a>
+    </td>
+    <?php
+}
+
+/**
+ * @param string $table_name
+ * @param int $id
+ */
+function delete_link(string $table_name, int $id): void
+{
+    ?>
+    <td>
+        <a href='/delete-<?= $table_name ?>?id=<?= $id ?>'
+           class='btn btn-danger btn-sm' role='button'>Delete</a>
+    </td>
+    <?php
 }
 
 /**
@@ -111,8 +210,9 @@ function html_escape(string &$unsafe_data): string
 
 function custom_exception(object $exception): void
 {
+	header('HTTP/1.1 500 Internal Server Error', TRUE, 500);
     require BASEDIR . '/resources/views/partials/header.php';
-    echo '<div class="danger col-md-12"><b>Fatal Error!</b>';
+    echo '<div class="danger col-md-12"><b>500 Internal Server Error</b>';
 
     $error_msg = 'DATE: ' . MYSQL_DATETIME_TODAY . "\nERROR: " . $exception->getMessage() . "\nFILE: " . $exception->getFile() . ' on line ' . $exception->getLine() . "\n\nSTACK TRACE\n" . $exception->getTraceAsString() . "\n";
 

@@ -3,6 +3,7 @@
 namespace App\Core;
 
 use BadMethodCallException;
+use PDO;
 
 /**
  * Class Router
@@ -10,6 +11,11 @@ use BadMethodCallException;
  */
 class Router
 {
+    /**
+     * @var PDO
+     */
+    private PDO $pdo;
+
     /**
      * @var string
      */
@@ -22,10 +28,12 @@ class Router
 
     /**
      * Router constructor.
+     * @param PDO $pdo
      * @param string $uri
      */
-    public function __construct(string $uri)
+    public function __construct(PDO $pdo, string $uri)
     {
+        $this->pdo = $pdo;
         $this->uri = $uri;
     }
 
@@ -70,7 +78,7 @@ class Router
     private function callAction(string $controller, string $method): ?int
     {
         $controller = "App\Http\Controllers\\$controller";
-        $controller = new $controller($this->uri);
+        $controller = new $controller($this->pdo, $this->uri);
         if (!method_exists($controller, $method))
         {
             throw new BadMethodCallException ("Controller does not respond to the $method method call");

@@ -4,16 +4,16 @@ namespace App\Http\Controllers\Pages;
 
 class PagesController
 {
+    private $pdo;
+
+    public function __construct($pdo)
+    {
+        $this->pdo = $pdo;
+    }
 
     final public function index(): void
     {
         view('display-template', ['templatePage' => 'pages/index']);
-    }
-
-
-    final public function adminHome(): void
-    {
-        view('layouts/layout-admin', ['templatePage' => 'default']);
     }
 
     final public function about(): void
@@ -28,23 +28,19 @@ class PagesController
         view('layouts/layout', ['templatePage' => 'pages/contact', 'company' => $company]);
     }
 
-    final public function table(): void
+    final public function dashboard(): void
     {
-        view('layouts/layout', ['templatePage' => 'pages/table']);
+        view('layouts/layout-admin', ['templatePage' => 'admin/dashboard']);
     }
 
-    final public function flash(): void
-    {
-        view('layouts/layout', ['templatePage' => 'pages/flash']);
-    }
 
     final public function settings(): void
     {
-        view('layouts/layout', ['templatePage' => 'admin/settings']);
+        view('layouts/layout-admin', ['templatePage' => 'admin/settings']);
     }
 
     final public function errors(): void
     {
-        view('layouts/layout', ['templatePage' => 'admin/errors']);
+        view('layouts/layout-admin', ['templatePage' => 'admin/errors']);
     }
 }

@@ -40,6 +40,6 @@ class ListLoginsController
 FROM user_login 
 ORDER BY login_datetime DESC';
         $stmt = $db->pdoQuery($sql);
-        view('layouts/layout', ['templatePage' => 'admin/users/list-logins', 'stmt' => $stmt]);
+        view('layouts/layout-admin', ['templatePage' => 'admin/users/list-logins', 'stmt' => $stmt]);
     }
 }

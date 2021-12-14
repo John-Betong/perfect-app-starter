@@ -1,5 +1,5 @@
 <p class="text-center">
-    <a href="admin">Admin Login</a> | <a href="about">About</a> | <a href="contact">Contact</a> |<a href="table">HTML Table</a> | <a href="register">Form</a> | <a href="flash">Flash</a>
+    <a href="login">Login</a> | <a href="register">Register</a> | <a href="v1">User API</a> | <a href="about">About</a> | <a href="contact">Contact</a>
 </p>
 
 <div class="text-center">

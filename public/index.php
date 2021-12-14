@@ -7,6 +7,6 @@ use App\Core\Request;
 use App\Core\Router;
 
 $request = new Request;
-$router = new Router($request->uri());
+$router = new Router($pdo, $request->uri());
 require '../app/routes.php';
 $router->directTraffic($request->method());

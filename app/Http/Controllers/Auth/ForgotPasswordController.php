@@ -164,14 +164,11 @@ class ForgotPasswordController
         $message .= "<p style='color:#080;font-size:18px;'><a href='". APPLICATION_URL . "/reset?k=$encoded_token'>" . APPLICATION_URL . "/reset?k=$encoded_token</a></p>";
         $message .= '</body></html>';
 
-        $headers[]  = 'MIME-Version: 1.0' . "\r\n";
-        $headers[] .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
-        $headers[] .= [
-            'From' => ADMIN_EMAIL_FROM,
-            'Reply-To' => ADMIN_EMAIL_FROM,
-            'X-Mailer' => 'PHP/' . PHP_VERSION
-        ];
+        $headers[] = "To: $to <$to>";
+        $headers[] = 'From:' . ADMIN_EMAIL_FROM;
 
         $this->mailSubmissionAgent->send($to, $subject, $message, $headers);
         Flash::addmessage(ACTIONS_ARRAY['reset_sent']['message'], ACTIONS_ARRAY['reset_sent']['status']);

@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-
 namespace App\Http\Controllers\Auth;
 
 use App\Validation\FormValidation;
@@ -9,9 +8,23 @@ use PerfectApp\Database\PdoCrud;
 use PerfectApp\Mail\PHPMailSubmissionAgent;
 use PerfectApp\Utilities\TokenGenerator;
 
-
 class RegisterBaseController
 {
+    /**
+     * @var PdoCrud
+     */
+    protected PdoCrud $db;
+
+    /**
+     * @var PHPMailSubmissionAgent
+     */
+    protected PHPMailSubmissionAgent $mailSubmissionAgent;
+
+    /**
+     * @var TokenGenerator
+     */
+    protected TokenGenerator $tokenGenerator;
+
     /**
      * @var FormValidation
      */
@@ -46,10 +59,16 @@ class RegisterBaseController
         , 'password_confirm'
     ];
 
-    public function __construct()
+    /**
+     * RegisterBaseController constructor.
+     * @param PDO $pdo
+     */
+    public function __construct(PDO $pdo)
     {
+        $this->db = new PdoCrud($pdo);
         $this->validate = new FormValidation();
         $this->tokenGenerator = new TokenGenerator();
+        $this->mailSubmissionAgent = new PHPMailSubmissionAgent();
     }
 
     /**

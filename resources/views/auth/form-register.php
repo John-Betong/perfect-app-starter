@@ -73,7 +73,6 @@
                                    name="password"
                                    type="password"
                                    class="form-control <?= !empty($error['password']) ? 'is-invalid' : '' ?>"
-                                   value="<?= !empty($_POST['password']) ? html_escape($_POST['password']) : '' ?>"
                             >
 
                             <?php if (!empty($error['password'])): ?>
@@ -88,7 +87,6 @@
                                    name="password_confirm"
                                    type="password"
                                    class="form-control <?= !empty($error['password_confirm']) ? 'is-invalid' : '' ?>"
-                                   value="<?= !empty($_POST['password_confirm']) ? html_escape($_POST['password_confirm']) : '' ?>"
                             >
 
                             <?php if (!empty($error['password_confirm'])): ?>

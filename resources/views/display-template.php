@@ -1,7 +1,13 @@
 <?php declare(strict_types=1);
 
-//TODO: Used by register controller. Why do I have this instead of using layout?
-// This should be in layouts folder
+//----------------------------------------------------------------------------------------
+// Redirect if logged in
+//----------------------------------------------------------------------------------------
+
+if (isset($_SESSION['login']))
+{
+    redirect('dashboard');
+}
 
 use App\Validation\FormValidation;
 $validate = new FormValidation();
