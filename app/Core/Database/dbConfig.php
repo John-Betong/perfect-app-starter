@@ -6,7 +6,7 @@
 
 return [
           'charset' =>'utf8mb4'
-        , 'dbname' =>'exambuilder'
+        , 'dbname' =>'perfect-app-starter'
         , 'username' =>'root'
         , 'password' =>''
         , 'host' => 'localhost'
