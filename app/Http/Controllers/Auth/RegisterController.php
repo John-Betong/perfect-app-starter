@@ -95,11 +95,9 @@ class RegisterController extends RegisterBaseController
 
                 $headers[] = 'MIME-Version: 1.0';
                 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-                $headers[] = "To: $to <$to>";
                 $headers[] = 'From:' . ADMIN_EMAIL_FROM;
 
-        $this->mailSubmissionAgent->send(ADMIN_EMAIL_TO, 'Confirm Email', $message, $headers);
+        $this->mailSubmissionAgent->send($to, 'Confirm Email', $message, $headers);
         redirect('./login?action=confirm');
     }
 }
