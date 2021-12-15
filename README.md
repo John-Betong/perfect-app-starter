@@ -3,6 +3,7 @@ App starter for Perfect App CRUD Framework
 
 #### Features
 
+* PSR-4 Compliant
 * User Registration
 * User Login
 * Forgot Password/Password Reset
