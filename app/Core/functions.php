@@ -256,7 +256,7 @@ function custom_exception(object $exception): void
         echo '</pre>';
         echo '</div>';
     }
-    require BASEDIR . './resources/views/partials/footer.php';
+    require BASEDIR . '/resources/views/partials/footer.php';
 }
 
 /**
