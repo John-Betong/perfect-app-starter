@@ -219,7 +219,8 @@ INNER JOIN roles AS r ON u.role_id = r.role_id";
             throw new InvalidArgumentException('Invalid ID');
         }
 
-        if ($_GET['id'] === $_SESSION['user_id'])
+        //$_GET['id'] is string, $_SESSION['user_id'] is int
+        if ($_GET['id'] == $_SESSION['user_id'])
         {
             Flash::addmessage(ACTIONS_ARRAY['user-delete-error']['message'], ACTIONS_ARRAY['user-delete-error']['status']);
             redirect('list-users');
