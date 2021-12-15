@@ -22,6 +22,15 @@
                         </div>
 
                         <div class="form-group">
+                            <div class="custom-control custom-switch">
+                                <input id="is_email_verified" name="is_email_verified" type="checkbox" class="custom-control-input"
+                                       value="1"
+                                    <?= !empty($form_data['is_email_verified']) ? 'checked' : '' ?> >
+                                <label class="custom-control-label" for="is_email_verified">Verify Email</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="role_id">Select Role</label>
                             <select id="role_id"
                                     name="role_id"

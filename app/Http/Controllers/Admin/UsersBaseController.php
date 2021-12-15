@@ -48,6 +48,8 @@ class UsersBaseController
     protected array $allowedFields = [
         'is_active'
         ,
+        'is_email_verified'
+        ,
         'role_id'
         ,
         'username'
