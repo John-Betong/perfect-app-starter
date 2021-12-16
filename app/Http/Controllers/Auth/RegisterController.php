@@ -85,7 +85,7 @@ class RegisterController extends RegisterBaseController
 
 
         $to = $_POST['email'];
-        $subject = APP_NAME . ' - Forgot Password';
+        $subject = APP_NAME . ' - Verify Email';
 
                 $message = '<html lang="en"><body>';
                 $message .= '<h1 style="color:#f40;">Thank you for registering.</h1>';
@@ -97,7 +97,7 @@ class RegisterController extends RegisterBaseController
                 $headers[] = 'Content-type: text/html; charset=iso-8859-1';
                 $headers[] = 'From:' . ADMIN_EMAIL_FROM;
 
-        $this->mailSubmissionAgent->send($to, 'Confirm Email', $message, $headers);
+        $this->mailSubmissionAgent->send($to, $subject, $message, $headers);
         redirect('./login?action=confirm');
     }
 }
