@@ -1,9 +1,0 @@
-DATE: 2021-12-11 18:49:01
-ERROR: Controller does not respond to the adminHome method call
-FILE: C:\laragon\www\perfect-app-starter\app\Core\Router.php on line 84
-
-STACK TRACE
-#0 C:\laragon\www\perfect-app-starter\app\Core\Router.php(70): App\Core\Router->callAction(Object(App\Http\Controllers\Pages\PagesController), 'adminHome')
-#1 C:\laragon\www\perfect-app-starter\public\index.php(12): App\Core\Router->directTraffic('GET')
-#2 {main}
-
