@@ -102,14 +102,14 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 
 define('BASEDIR', __dir__);
 
-require '../app/debug/debug.php';
-require '../app/actions/actions.php';
+require BASEDIR . '/app/debug/debug.php';
+require BASEDIR . '/app/actions/actions.php';
 
 //----------------------------------------------------------------------------------------
 // Path To error log
 //----------------------------------------------------------------------------------------
 
-define('ERROR_LOG_PATH', '../logs/error.log');
+define('ERROR_LOG_PATH', BASEDIR . '/logs/error.log');
 
 //----------------------------------------------------------------------------------------
 // Custom exception handler function (functions.php)
