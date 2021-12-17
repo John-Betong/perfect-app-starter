@@ -20,8 +20,8 @@ License: Proprietary - No Licence Granted
 
 ## Requirements
 
- * PHP Version <=7.4
-* Apache2 with mod_rewrite enabled
+* PHP Version <=7.4
+* Apache2 with mod_rewrite and SSL enabled
 * Composer
 * HTTPS
 * Mail Server
@@ -102,4 +102,4 @@ The routes file is at `/app/routes/php`.
 * `$router->get('add-user', 'Admin\UsersController@create');`
 * This example responds to a GET Request from /add-user and calls the Controller in `app/Http/Controllers/Admin/UsersController.php` and calls the `create` method which calls the view.
 
-  * Last Revised 12-14-21
+  * Last Revised 12-17-21
