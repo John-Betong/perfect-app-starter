@@ -55,7 +55,7 @@ define('IMAGE_ALT', APP_NAME);
 // Debugging
 //----------------------------------------------------------------------------------------
 
-define('DEBUG', 0); // Toggle Debugging
+define('DEBUG', 1); // Toggle Debugging
 define('SHOW_DEBUG_PARAMS', DEBUG); // Display Sql & Sql Parameters
 define('SHOW_SESSION_DATA', DEBUG); // Display Session Data
 define('SHOW_POST_DATA', DEBUG); // Display Post Data
