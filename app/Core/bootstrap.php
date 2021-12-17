@@ -5,6 +5,6 @@ use App\Core\Database\Connection;
 session_start();
 
 require 'functions.php';
-require '../config.php';
-$config = require '../app/Core/Database/dbConfig.php';
+require '../config/config.php';
+$config = require '../config/dbConfig.php';
 $pdo = (new Connection())->connect($config);

@@ -41,7 +41,7 @@ function redirect(string $path): void
 function view(string $pageName, array $templateData = [])
 {
     extract($templateData, EXTR_OVERWRITE);
-    require BASEDIR . "/resources/views/$pageName.php";
+    require "../resources/views/$pageName.php";
 }
 
 /**

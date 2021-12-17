@@ -102,8 +102,8 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 
 define('BASEDIR', __dir__);
 
-require BASEDIR . '/app/debug/debug.php';
-require BASEDIR . '/app/actions/actions.php';
+require '../app/debug/debug.php';
+require '..//app/actions/actions.php';
 
 //----------------------------------------------------------------------------------------
 // Path To error log
