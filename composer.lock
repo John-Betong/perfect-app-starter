@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "476094025db24696d8dd031e0b270651",
+    "content-hash": "166b51306050027d47770f497672fd6d",
     "packages": [
         {
             "name": "krubio/perfect-app-framework",
@@ -24,7 +24,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4",
         "ext-pdo": "*",
         "ext-ctype": "*",
         "ext-openssl": "*",
