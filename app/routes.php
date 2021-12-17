@@ -3,8 +3,6 @@
 /* Page Routes */
 
 $router->get('', 'Pages\PagesController@index');
-
-$router->get('admin', 'Pages\PagesController@adminHome');
 $router->get('about', 'Pages\PagesController@about');
 $router->get('contact', 'Pages\PagesController@contact');
 

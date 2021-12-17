@@ -4,13 +4,6 @@ namespace App\Http\Controllers\Pages;
 
 class PagesController
 {
-    private $pdo;
-
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-    }
-
     final public function index(): void
     {
         view('display-template', ['templatePage' => 'pages/index']);
@@ -32,7 +25,6 @@ class PagesController
     {
         view('layouts/layout-admin', ['templatePage' => 'admin/dashboard']);
     }
-
 
     final public function settings(): void
     {

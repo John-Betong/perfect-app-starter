@@ -24,7 +24,7 @@ License: Proprietary - No Licence Granted
 * Apache2 with mod_rewrite enabled
 * Composer
 * HTTPS
-* Ability to send/receive mail from PHP mail function - TODO: Include mail test script
+* Mail Server
 
 
 ## Initial Installation
@@ -59,6 +59,10 @@ License: Proprietary - No Licence Granted
   * Errors are logged by default to `/logs/error.log`. This file must be writable on Linux
   * To display debugging info set `DEBUG` to 1. This will show various data helpful for debugging
 
+
+ ##### Linux Permissions
+ * Application Root Directory 775
+ * Logs Directory and Log File 775
 
 ## To Run Locally Using PHP
 From this directory, run the following command:
