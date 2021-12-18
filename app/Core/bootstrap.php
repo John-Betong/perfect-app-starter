@@ -5,6 +5,6 @@ use PerfectApp\Database\Connection;
 session_start();
 
 require 'functions.php';
-require '../config.php';
-$config = require '../config/dbConfig.php';
+require dirname(__DIR__, 2) . '/config/config.php';
+$config = require  BASEDIR . '/config/dbConfig.php';
 $pdo = (new Connection())->connect($config);

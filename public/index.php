@@ -8,5 +8,5 @@ use App\Core\Router;
 
 $request = new Request;
 $router = new Router($pdo, $request->uri());
-require '../app/routes.php';
+require BASEDIR . '/config/routes.php';
 $router->directTraffic($request->method());

@@ -93,14 +93,14 @@ define('ACTIONS_ARRAY', [
 
 if (version_compare(PHP_VERSION, '7.4') < 0)
 {
-    die('Your PHP installation is too old. Requires at least PHP 7.4');
+    die('Your PHP version must be 7.4 or higher. Your version: ' . phpversion());
 }
 
 //----------------------------------------------------------------------------------------
 // Required files
 //----------------------------------------------------------------------------------------
 
-define('BASEDIR', __dir__);
+define('BASEDIR',dirname(__DIR__));
 
 require BASEDIR . '/app/debug/debug.php';
 require BASEDIR . '/app/actions/actions.php';
