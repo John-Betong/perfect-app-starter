@@ -30,7 +30,7 @@ define('APPLICATION_URL', "https://{$_SERVER['HTTP_HOST']}");
 // Database
 //----------------------------------------------------------------------------------------
 
-define('DB_CONNECTION','dev-mysql'); // dev-mysql or prod-mysql
+define('DB_CONNECTION', 'dev-mysql'); // dev-mysql or prod-mysql
 
 //----------------------------------------------------------------------------------------
 // Dates & Times
@@ -73,7 +73,8 @@ define('SHOW_REQUEST_DATA', 0); // Display Request Data
 // Actions
 //----------------------------------------------------------------------------------------
 
-define('ACTIONS_ARRAY', [
+define('ACTIONS_ARRAY',
+    [
         'insert' => ['status' => 'success', 'message' => 'Record Inserted']
         //TODO:  , 'admin-error' => ['status' => 'danger', 'message' => 'Cannot Delete Super Admin']
         , 'user-delete-error' => ['status' => 'danger', 'message' => 'You cannot delete user you are logged in as.']
@@ -106,7 +107,7 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 // Required files
 //----------------------------------------------------------------------------------------
 
-define('BASEDIR',dirname(__DIR__));
+define('BASEDIR', dirname(__DIR__));
 
 require BASEDIR . '/app/debug/debug.php';
 require BASEDIR . '/app/actions/actions.php';

@@ -46,8 +46,7 @@ class RegisterController extends RegisterBaseController
                     $this->validate->setError($error);
                     $errorResult = $this->validate->displayErrors();
 
-                    view(
-                        'display-template',
+                    view('display-template',
                         [
                             'templatePage' => $this->templatePath,
                             'errorResult' => $errorResult,
