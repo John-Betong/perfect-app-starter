@@ -5,7 +5,6 @@ declare(strict_types=1);
 
 namespace App\Validation;
 
-
 /**
  * Class FormValidation
  * @package App\Validation
@@ -16,7 +15,6 @@ class FormValidation
      * @var array
      */
     public array $error = [];
-
 
     /**
      * @param array $whitelist
@@ -33,10 +31,10 @@ class FormValidation
         }
     }
 
-
     /**
-     * @param array $requiredFields
-     * @param array $requestArray  $_POST, $_GET
+     * @param  array  $requiredFields
+     * @param  array  $requestArray
+     *
      * @return array
      */
     final public function requiredFieldCheck(array $requiredFields, array $requestArray): array
@@ -50,7 +48,6 @@ class FormValidation
         return $this->error;
     }
 
-
     /**
      * @return array
      */
@@ -61,7 +58,6 @@ class FormValidation
         }
         return $this->error;
     }
-
 
     /**
      * @return array
@@ -74,11 +70,11 @@ class FormValidation
         return $this->error;
     }
 
-
     /**
-     * @param $requestType
-     * @param $field
-     * @return array //reset_code, k
+     * @param  array   $requestType
+     * @param  string  $field
+     *
+     * @return array
      */
     final public function validateResetCode(array $requestType, string $field): array
     {
@@ -90,13 +86,12 @@ class FormValidation
     }
 
     /**
-     * @param array $error
+     * @param  array  $error
      */
     final public function setError(array $error): void
     {
         $this->error = $error;
     }
-
 
     /**
      * @return array
@@ -105,7 +100,6 @@ class FormValidation
     {
         return $this->error;
     }
-
 
     /**
      * @return string $html

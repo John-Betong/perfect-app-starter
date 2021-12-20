@@ -23,8 +23,9 @@ class Request
         return parse_url($uri, PHP_URL_PATH);
     }
 
+
     /**
-     * @return mixed
+     * @return string
      */
     final public function method(): string
     {

@@ -17,8 +17,9 @@ function dd($data): void
     die;
 }
 
+
 /**
- * @param mixed ...$data
+ * @param  mixed  ...$data
  */
 function dump(...$data): void
 {

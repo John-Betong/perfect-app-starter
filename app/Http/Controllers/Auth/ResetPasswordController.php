@@ -37,8 +37,9 @@ class ResetPasswordController
      */
     private PDO $pdo;
 
+
     /**
-     * @var string[]
+     * @var array|string[]
      */
     private array $allowedFields = [
           'reset_code'
@@ -46,8 +47,9 @@ class ResetPasswordController
         , 'confirm_new_password'
     ];
 
+
     /**
-     * @var string[]
+     * @var array|string[]
      */
     private array $requiredFields = [
           'reset_code'
@@ -59,6 +61,7 @@ class ResetPasswordController
      * @var string
      */
     private string $templatePath = 'auth/passwords/form-reset';
+
 
     /**
      * @var mixed|null

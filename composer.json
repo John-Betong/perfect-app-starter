@@ -37,8 +37,5 @@
     "ext-openssl": "*",
     "krubio/perfect-app-framework": "3.0",
     "ext-json": "*"
-  },
-  "require-dev": {
-    "nunomaduro/phpinsights": "^2.0"
   }
 }

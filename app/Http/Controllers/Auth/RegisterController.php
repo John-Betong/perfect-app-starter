@@ -19,8 +19,9 @@ class RegisterController extends RegisterBaseController
         view('display-template', ['templatePage' => $this->templatePath, 'errorResult' => '']);
     }
 
+
     /**
-     *
+     * @throws \Exception
      */
     final public function store(): void
     {
@@ -76,7 +77,7 @@ class RegisterController extends RegisterBaseController
     }
 
     /**
-     * @param $encoded_token
+     * @param  string  $encoded_token
      */
     private function emailActivationToken(string $encoded_token): void
     {

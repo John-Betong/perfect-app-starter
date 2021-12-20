@@ -4,8 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8688932c306f402506a28b55b75855f",
-    "packages": [],
+    "content-hash": "476094025db24696d8dd031e0b270651",
+    "packages": [
+        {
+            "name": "krubio/perfect-app-framework",
+            "version": "3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benanamen/perfect-app-framework.git",
+                "reference": "origin/master"
+            },
+            "type": "library"
+        }
+    ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
