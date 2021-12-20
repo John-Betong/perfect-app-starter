@@ -3,7 +3,7 @@
 /**
  * @param array $data
  */
-function pr(array $data)
+function pr(array $data): void
 {
     echo '<pre>', print_r($data, true), '</pre>';
 }
@@ -11,7 +11,7 @@ function pr(array $data)
 /**
  * @param $data
  */
-function dd($data)
+function dd($data): void
 {
     dump($data);
     die;
@@ -20,7 +20,7 @@ function dd($data)
 /**
  * @param mixed ...$data
  */
-function dump(...$data)
+function dump(...$data): void
 {
     var_dump(...$data);
 }
@@ -38,7 +38,7 @@ function redirect(string $path): void
  * @param string $pageName
  * @param array $templateData
  */
-function view(string $pageName, array $templateData = [])
+function view(string $pageName, array $templateData = []): void
 {
     extract($templateData, EXTR_OVERWRITE);
     require "../resources/views/$pageName.php";
