@@ -7,7 +7,7 @@
             <!-- form card -->
             <div class="card border-primary">
                 <div class="card-header bg-primary text-white">
-                    <h3 class="mb-0"><?= !empty($_GET['id'])  ? 'Edit' : 'Add' ?> User</h3>
+                    <h3 class="mb-0"><?= !empty($_GET['id']) ? 'Edit' : 'Add' ?> User</h3>
                 </div>
                 <div class="card-body">
                     <form method="post" autocomplete="off" action="<?= $uri ?>">
