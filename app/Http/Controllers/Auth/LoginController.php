@@ -52,7 +52,7 @@ class LoginController
     public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
-        $this->validate = new ValidateFormRequiredWhitelist;
+        $this->validate = new ValidateFormRequiredWhitelist();
     }
 
     /**

@@ -13,6 +13,6 @@ if (DEBUG)
         , 'SESSION' => [SHOW_SESSION_DATA => $session]];
 
     ob_start();
-    $varDumper = new HTMLVarDumper;
+    $varDumper = new HTMLVarDumper();
     ShowDebugData::displayDebugData($varDumper, $var);
 }
