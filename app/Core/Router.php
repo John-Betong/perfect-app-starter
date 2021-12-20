@@ -81,7 +81,7 @@ class Router
         $controller = new $controller($this->pdo, $this->uri);
         if (!method_exists($controller, $method))
         {
-            throw new BadMethodCallException ("Controller does not respond to the $method method call");
+            throw new BadMethodCallException("Controller does not respond to the $method method call");
         }
         return $controller->$method();
     }
