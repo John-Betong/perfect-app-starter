@@ -6,7 +6,7 @@ require '../app/Core/bootstrap.php';
 use App\Core\Request;
 use App\Core\Router;
 
-$request = new Request;
+$request = new Request();
 $router = new Router($pdo, $request->uri());
 require BASEDIR . '/config/routes.php';
 $router->directTraffic($request->method());
