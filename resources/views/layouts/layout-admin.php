@@ -20,7 +20,7 @@ require '../resources/views/partials/navbar.php';
     <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <?php //require 'partials/menu.php'; ?>
+            <?php //require 'partials/menu.php';?>
         </div>
         <div class="col-md-12">
             <?php

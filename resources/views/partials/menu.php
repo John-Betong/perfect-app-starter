@@ -6,14 +6,14 @@
     $navArray = [
           '/' =>'Home'
         , '/list-users' => 'List Users'
-        , '/change-password '=> 'Change Password'
-        , '/settings'=>'Settings'
+        , '/change-password ' => 'Change Password'
+        , '/settings' =>'Settings'
         , '/list-logins' => 'Login Attempts'
         , '/errors' => 'Error Log'
         , '/logout' => 'Log Out'
     ];
     echo '<ul class="list-group list-group-flush">';
-    foreach($navArray as $path => $linkText) {
+    foreach ($navArray as $path => $linkText) {
         echo "<li class='list-group-item'><a href='$path'>$linkText</a></li>\n";
     }
     echo '</ul>';

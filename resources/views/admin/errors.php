@@ -28,7 +28,7 @@ if (isset($_GET['deleted']) && $error_log_filesize > 0)
         <tr>
             <td>
                 <textarea rows="15" disabled style="width:100%"
-                          title="Errors"><?= trim(implode("\n", array_slice(file(ERROR_LOG_PATH), -$show_how_many_errors))) //Show last X line of error log  ?></textarea>
+                          title="Errors"><?= trim(implode("\n", array_slice(file(ERROR_LOG_PATH), -$show_how_many_errors))) //Show last X line of error log?></textarea>
             </td>
         </tr>
         </tbody>

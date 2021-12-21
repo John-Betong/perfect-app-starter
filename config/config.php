@@ -5,7 +5,9 @@
  * @version 3.0.0
  * @author Kevin Rubio
  * @copyright 2019 Galaxy Internet
+ *
  * @license Proprietary - No Licence Granted
+ *
  * @see http://galaxyinternet.us
  *
  */

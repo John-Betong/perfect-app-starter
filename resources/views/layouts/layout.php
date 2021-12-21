@@ -8,7 +8,7 @@ require '../resources/views/partials/header.php';
     <div class="row">
         <div class="col-md-12">
             <?php
-            FLASH::displayMessages();
+            Flash::displayMessages();
             require '../resources/views/' . $templatePage . '.php';
             ?>
         </div>

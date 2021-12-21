@@ -68,6 +68,3 @@ $router->get('list-logins', 'Admin\ListLoginsController@index');
 //----------------------------------------------------------------------------------------
 
 $router->get('v1', 'ApiUsers@index');
-
-
-

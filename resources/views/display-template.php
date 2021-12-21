@@ -10,6 +10,7 @@ if (isset($_SESSION['login']))
 }
 
 use App\Validation\FormValidation;
+
 $validate = new FormValidation();
 
 require 'partials/header.php';

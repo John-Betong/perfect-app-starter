@@ -12,7 +12,6 @@ use PerfectApp\Mail\PHPMailSubmissionAgent;
 use PerfectApp\Utilities\Flash;
 use PerfectApp\Utilities\TokenGenerator;
 
-
 /**
  * Class ForgotPasswordController
  *

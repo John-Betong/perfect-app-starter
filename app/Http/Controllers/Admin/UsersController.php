@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use InvalidArgumentException;
 use PDOException;
 use PerfectApp\Utilities\Flash;

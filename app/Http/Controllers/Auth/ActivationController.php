@@ -59,7 +59,7 @@ class ActivationController
 
             $status = $stmt->rowCount() ? 'verified' : 'failed_confirmation';
             Flash::addmessage(ACTIONS_ARRAY[$status]['message'], ACTIONS_ARRAY[$status]['status']);
-            redirect("./login");
+            redirect('./login');
         }
     }
 }

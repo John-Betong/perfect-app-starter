@@ -64,7 +64,7 @@ function show_debug_params(object $stmt): void
 function isValidUser(): void
 {
     global $pdo;// TODO: Get rid of global. Just a quickfix to test function
-    $sql = "SELECT EXISTS(SELECT * FROM users WHERE user_id = ?) as isvalid";
+    $sql = 'SELECT EXISTS(SELECT * FROM users WHERE user_id = ?) as isvalid';
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$_SESSION['user_id']]);
     $row = $stmt->fetch();
@@ -169,7 +169,6 @@ function show_form_errors(array $errorArr): string
         <div class="danger">$errors</div>
     </div>
 EOD;
-
 }
 
 /**

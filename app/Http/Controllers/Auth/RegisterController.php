@@ -11,8 +11,7 @@ use PDOException;
 class RegisterController extends RegisterBaseController
 {
     /**
-     * * Show the form for creating a new resource.
-     *
+     * Show the form for creating a new resource.
      */
     final public function create(): void
     {
@@ -82,7 +81,6 @@ class RegisterController extends RegisterBaseController
     {
         /*Send user activation email*/
         //$message = "Click to activate account\r\n" . APPLICATION_URL . "/activate?k=$encoded_token";
-
 
         $to = $_POST['email'];
         $subject = APP_NAME . ' - Verify Email';

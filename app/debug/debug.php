@@ -4,7 +4,7 @@ namespace PerfectApp\Debug;
 
 if (DEBUG)
 {
-    $session = $_SESSION ??  '$_SESSION is not set';
+    $session = $_SESSION ?? '$_SESSION is not set';
     $var = [
         'POST' => [SHOW_POST_DATA => $_POST]
         , 'GET' => [SHOW_GET_DATA => $_GET]

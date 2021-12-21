@@ -59,7 +59,7 @@ else
     foreach ($result as $row)
     {
         $tbl->addRow();
-        $tbl->addCell((string)$row['user_id']);
+        $tbl->addCell((string) $row['user_id']);
         $tbl->addCell(html_escape($row['role_description']));
         $tbl->addCell(html_escape($row['username']));
         $tbl->addCell(html_escape($row['email']));

@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-
 namespace App\Http\Controllers\Auth;
 
 use App\Validation\FormValidation;
@@ -8,7 +7,6 @@ use PDO;
 use PerfectApp\Database\PdoCrud;
 use PerfectApp\Mail\PHPMailSubmissionAgent;
 use PerfectApp\Utilities\Flash;
-
 
 /**
  * Class ResetPasswordController
@@ -37,7 +35,6 @@ class ResetPasswordController
      */
     private PDO $pdo;
 
-
     /**
      * @var array|string[]
      */
@@ -46,7 +43,6 @@ class ResetPasswordController
         , 'new_password'
         , 'confirm_new_password'
     ];
-
 
     /**
      * @var array|string[]
@@ -61,7 +57,6 @@ class ResetPasswordController
      * @var string
      */
     private string $templatePath = 'auth/passwords/form-reset';
-
 
     /**
      * @var mixed|null
@@ -83,8 +78,7 @@ class ResetPasswordController
     }
 
     /**
-     * * Show the form for creating a new resource.
-     *
+     * Show the form for creating a new resource.
      */
     final public function create(): void
     {

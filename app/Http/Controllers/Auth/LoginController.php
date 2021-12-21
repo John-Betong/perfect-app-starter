@@ -148,7 +148,7 @@ class LoginController
             setcookie(session_name(), "", time() - 3600, "/");
         }
 
-        $_SESSION = array();//clear session from globals
+        $_SESSION = [];//clear session from globals
         session_destroy();//clear session from disk
         Flash::addmessage(ACTIONS_ARRAY['logout']['message'], ACTIONS_ARRAY['logout']['status']);
         view('auth/passwords/logout', ['templatePage' => $this->templatePath]);
