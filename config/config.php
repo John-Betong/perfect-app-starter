@@ -13,14 +13,19 @@
  */
 
 //----------------------------------------------------------------------------------------
+// Set LOCALHOST 
+//----------------------------------------------------------------------------------------
+define('LOCALHOST', 'localhost'===$_SERVER['SERVER_NAME']);
+
+//----------------------------------------------------------------------------------------
 // Set App Name & Admin Email
 //----------------------------------------------------------------------------------------
 
-define('APP_NAME', 'Perfect App Starter');
+define('APP_NAME', 'Perfect App Starter - JB - modifications');
 define('VERSION', 'v.3.0');
 
-define('ADMIN_EMAIL_TO', 'admin@example.com');
-define('ADMIN_EMAIL_FROM', 'DoNotReply@example.com');
+define('ADMIN_EMAIL_TO',   'ajrutherford@gmail.com');
+define('ADMIN_EMAIL_FROM', 'john.betong@gmail.com');
 
 //----------------------------------------------------------------------------------------
 // Application Url
@@ -38,7 +43,7 @@ define('DB_CONNECTION', 'dev-mysql'); // dev-mysql or prod-mysql
 // Dates & Times
 //----------------------------------------------------------------------------------------
 
-date_default_timezone_set('America/Los_Angeles');
+date_default_timezone_set('Asia/Bangkok');
 
 // MySQL Datetime. Format: 2010-07-15 16:33:56
 define('MYSQL_DATETIME_TODAY', date('Y-m-d H:i:s'));
@@ -55,20 +60,20 @@ define('LOG_ERROR', 1); // Log errors to file
 //----------------------------------------------------------------------------------------
 
 define('IMAGE_FILENAME', 'logo.png');
-define('IMAGE_WIDTH', 320);
-define('IMAGE_HEIGHT', 220);
+define('IMAGE_WIDTH',   320);
+define('IMAGE_HEIGHT',  220);
 define('IMAGE_ALT', APP_NAME);
 
 //----------------------------------------------------------------------------------------
 // Debugging
 //----------------------------------------------------------------------------------------
 
-define('DEBUG', 0); // Toggle Debugging
+define('DEBUG', 1); // Toggle Debugging
 define('SHOW_DEBUG_PARAMS', DEBUG); // Display Sql & Sql Parameters
 define('SHOW_SESSION_DATA', DEBUG); // Display Session Data
-define('SHOW_POST_DATA', DEBUG); // Display Post Data
-define('SHOW_GET_DATA', DEBUG); // Display Get Data
-define('SHOW_COOKIE_DATA', 0); // Display Cookie Data
+define('SHOW_POST_DATA',    DEBUG); // Display Post Data
+define('SHOW_GET_DATA',     DEBUG); // Display Get Data
+define('SHOW_COOKIE_DATA',  0); // Display Cookie Data
 define('SHOW_REQUEST_DATA', 0); // Display Request Data
 
 //----------------------------------------------------------------------------------------
@@ -111,8 +116,8 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 
 define('BASEDIR', dirname(__DIR__));
 
-require BASEDIR . '/app/debug/debug.php';
 require BASEDIR . '/app/actions/actions.php';
+# require BASEDIR . '/app/debug/debug.php';
 
 //----------------------------------------------------------------------------------------
 // Path To error log

@@ -9,9 +9,8 @@ if (isset($_GET['theme']))
 }
 $theme = $_COOKIE['theme'] ?? $_COOKIE['theme'] ?? 'default';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html lang="en">
+<!-- header-admin.php -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,17 +18,23 @@ $theme = $_COOKIE['theme'] ?? $_COOKIE['theme'] ?? 'default';
 
     <title><?= APP_NAME ?></title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/bootstrap-<?= $theme ?>.css">
+    <!--    
+    <link rel="stylesheet" 
+        href="/css/bootstrap-default.css">
+    -->
 
     <!-- Custom stylesheet -->
-    <link type="text/css" rel="stylesheet" href="/css/custom.css">
+    <link type="text/css" rel="stylesheet" 
+        href="/css/custom.css">
 
     <script src="/js/jquery-3.4.1.min.js"></script>
 
     <!-- Data Tables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link type="text/css" rel="stylesheet" 
+        href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
     <script>
@@ -37,7 +42,10 @@ $theme = $_COOKIE['theme'] ?? $_COOKIE['theme'] ?? 'default';
             $('#myDataTable').DataTable();
         });
     </script>
-
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" 
+        href="/css/bootstrap-<?= $theme ?>.css">
 </head>
 
 <body>
+  <?php # require BASEDIR . '/app/debug/debug.php';

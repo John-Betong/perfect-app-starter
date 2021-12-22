@@ -11,3 +11,4 @@
         <h3>Contributors</h3>
         <cite>Kevin Rubio<br>John Betong</cite>
     </div>
+</div><!-- ADDED MISSING DIV -->    

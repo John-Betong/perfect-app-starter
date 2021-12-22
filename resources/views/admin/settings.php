@@ -1,9 +1,13 @@
 <h1>SETTINGS</h1>
 <p>
-    <span class="badge-pill badge-<?= LOG_ERROR === 0 ? 'danger' : 'success' ?> "><?= LOG_ERROR === 0 ? 'Off' : 'On' ?></span>
-    Error Logging </p>
+    <span class="badge-pill badge-<?= LOG_ERROR === 0 ? 'danger' : 'success' ?> ">
+        <?= LOG_ERROR === 0 ? 'Off' : 'On' ?>
+    </span>
+    Error Logging 
+</p>
 <p>
-    <span class="badge-pill badge-<?= DEBUG === 0 ? 'danger' : 'success' ?> "><?= DEBUG === 0 ? 'Off' : 'On' ?></span>
+    <span class="badge-pill badge-<?= DEBUG === 0 ? 'danger' : 'success' ?> ">
+        <?= DEBUG === 0 ? 'Off' : 'On' ?></span>
     Debugging </p>
 <p>
     <span class="badge-pill badge-<?= EMAIL_ERROR === 0 ? 'danger' : 'success' ?> "><?= EMAIL_ERROR === 0 ? 'Off' : 'On' ?></span>

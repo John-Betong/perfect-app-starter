@@ -53,7 +53,7 @@ function view(string $pageName, array $templateData = []): void
 function show_debug_params(object $stmt): void
 {
     echo '<div class="info">';
-    echo $stmt->debugDumpParams();
+    echo   $stmt->debugDumpParams();
     echo '</div>';
 }
 
