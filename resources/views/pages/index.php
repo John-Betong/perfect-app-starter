@@ -7,6 +7,7 @@
 
     <div class="text-center"><h2>A Proprietary Non-Opinionated Framework
             Implementing Best Practices</h2>
+    </div>
 
         <h3>Contributors</h3>
         <cite>Kevin Rubio<br>John Betong</cite>
