@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
-?>
 
+echo $tmp = <<< ____EOT
 <div class="d-flex p-2 justify-content-center mb-5">
 	<a href="https://jeremy.anetizer.com">
   	<img 
@@ -10,5 +10,8 @@
   		width="320" height="220"
   	>
   </a>
-  <?php require VIEWS .'/partials/menu-subs.php'; ?>
-</div>
+</div>  
+____EOT;
+
+require VIEWS .'/partials/menu-subs.php'; 
+

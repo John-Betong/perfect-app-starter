@@ -181,7 +181,9 @@ EOD;
 
 function logo(int $img_width, int $img_height, string $alt_text): void
 {
-    ?>
+    require VIEWS .'/partials/logo.php';
+
+    /*
     <div class="d-flex p-2 justify-content-center mb-5">
         <a href="<?= APPLICATION_URL ?>">
             <img src="./images/<?= IMAGE_FILENAME ?>"
@@ -190,7 +192,8 @@ function logo(int $img_width, int $img_height, string $alt_text): void
                  alt="<?= $alt_text ?>">
         </a>
     </div>
-    <?php
+    < ? php
+    */
 }
 
 /**

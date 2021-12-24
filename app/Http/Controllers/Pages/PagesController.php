@@ -32,8 +32,20 @@ class PagesController
         view(
             'layouts/layout',
             [
-                'templatePage'  => 'pages/rtfm', 
+               'templatePage'  => 'pages/rtfm', 
                 'company'       => $rtfm
+            ]
+        );
+    }
+
+    final public function debug_show(): void
+    {
+        $debugShow = 'DEBUGGING IS ON';
+        view(
+            'layouts/layout',
+            [
+                'templatePage'  => 'pages/debug-show', 
+                'company'       => $debugShow
             ]
         );
     }

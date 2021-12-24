@@ -7,3 +7,66 @@ STACK TRACE
 #1 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
 #2 {main}
 
+DATE: 2021-12-24 12:36:57
+ERROR: syntax error, unexpected token "echo"
+FILE: /var/www/a-Perfect-App-branch/resources/views/partials/logo.php on line 14
+
+STACK TRACE
+#0 /var/www/a-Perfect-App-branch/resources/views/auth/passwords/login.php(9): logo()
+#1 /var/www/a-Perfect-App-branch/app/Core/functions.php(45): require('...')
+#2 /var/www/a-Perfect-App-branch/app/Http/Controllers/Auth/LoginController.php(64): view()
+#3 /var/www/a-Perfect-App-branch/app/Core/Router.php(86): App\Http\Controllers\Auth\LoginController->showLogin()
+#4 /var/www/a-Perfect-App-branch/app/Core/Router.php(70): App\Core\Router->callAction()
+#5 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
+#6 {main}
+
+DATE: 2021-12-24 13:18:13
+ERROR: Failed opening required '../resources/views/pages/debug-show.php' (include_path='.:/usr/share/php')
+FILE: /var/www/a-Perfect-App-branch/resources/views/layouts/layout.php on line 12
+
+STACK TRACE
+#0 /var/www/a-Perfect-App-branch/app/Core/functions.php(45): require()
+#1 /var/www/a-Perfect-App-branch/app/Http/Controllers/Pages/PagesController.php(37): view()
+#2 /var/www/a-Perfect-App-branch/app/Core/Router.php(86): App\Http\Controllers\Pages\PagesController->rtfm()
+#3 /var/www/a-Perfect-App-branch/app/Core/Router.php(70): App\Core\Router->callAction()
+#4 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
+#5 {main}
+
+DATE: 2021-12-24 13:20:53
+ERROR: Failed opening required '../resources/views/pages/debug_show.php' (include_path='.:/usr/share/php')
+FILE: /var/www/a-Perfect-App-branch/resources/views/layouts/layout.php on line 12
+
+STACK TRACE
+#0 /var/www/a-Perfect-App-branch/app/Core/functions.php(45): require()
+#1 /var/www/a-Perfect-App-branch/app/Http/Controllers/Pages/PagesController.php(37): view()
+#2 /var/www/a-Perfect-App-branch/app/Core/Router.php(86): App\Http\Controllers\Pages\PagesController->rtfm()
+#3 /var/www/a-Perfect-App-branch/app/Core/Router.php(70): App\Core\Router->callAction()
+#4 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
+#5 {main}
+
+DATE: 2021-12-24 13:21:11
+ERROR: Call to a member function dump() on null
+FILE: /var/www/a-Perfect-App-branch/resources/views/pages/debug-show.php on line 6
+
+STACK TRACE
+#0 /var/www/a-Perfect-App-branch/resources/views/layouts/layout.php(12): require()
+#1 /var/www/a-Perfect-App-branch/app/Core/functions.php(45): require('...')
+#2 /var/www/a-Perfect-App-branch/app/Http/Controllers/Pages/PagesController.php(37): view()
+#3 /var/www/a-Perfect-App-branch/app/Core/Router.php(86): App\Http\Controllers\Pages\PagesController->rtfm()
+#4 /var/www/a-Perfect-App-branch/app/Core/Router.php(70): App\Core\Router->callAction()
+#5 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
+#6 {main}
+
+DATE: 2021-12-24 13:21:31
+ERROR: Using $this when not in object context
+FILE: /var/www/a-Perfect-App-branch/resources/views/pages/debug-show.php on line 6
+
+STACK TRACE
+#0 /var/www/a-Perfect-App-branch/resources/views/layouts/layout.php(12): require()
+#1 /var/www/a-Perfect-App-branch/app/Core/functions.php(45): require('...')
+#2 /var/www/a-Perfect-App-branch/app/Http/Controllers/Pages/PagesController.php(37): view()
+#3 /var/www/a-Perfect-App-branch/app/Core/Router.php(86): App\Http\Controllers\Pages\PagesController->rtfm()
+#4 /var/www/a-Perfect-App-branch/app/Core/Router.php(70): App\Core\Router->callAction()
+#5 /var/www/a-Perfect-App-branch/public_html/index.php(12): App\Core\Router->directTraffic()
+#6 {main}
+

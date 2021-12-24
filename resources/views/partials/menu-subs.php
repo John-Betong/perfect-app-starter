@@ -7,7 +7,8 @@ $aPages = [
 	'v1'       => 'User API',
 	'about'    => 'About',
 	'contact'  => 'Contact',
-	'rtfm'     => 'RTFM',
+  'rtfm'     => 'RTFM',
+  'debug_show' => 'DEBUG Show',
 ];
 
 $items = '';

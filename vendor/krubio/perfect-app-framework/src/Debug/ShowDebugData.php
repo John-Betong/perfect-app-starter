@@ -14,7 +14,13 @@ class ShowDebugData
      */
     public static function displayDebugData(HTMLVarDumper $varDumper, array $var = null) :void
     {
-        echo '<div class="danger"><H1>DEBUGGING IS ON !!!</H1></div>';
+      # require VIEWS .'/partials/debug-show.php';
+
+      if(0) :
+        echo '<div class="danger">
+                <H1>DEBUGGING IS ON !!!</H1>
+             </div>';
         $varDumper->dump($var);
+      endif;  
     }
 }

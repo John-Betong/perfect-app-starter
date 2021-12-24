@@ -3,18 +3,6 @@ body {
   /*padding-top: 70px;// For Nav Bar*/
   width: 88%; margin: 0 auto;
 }
-header {
-    width: 100%;
-    background-image:  url(/images/logo.png);
-    background-size: 4.2rem;
-    background-repeat:  no-repeat;
-    text-align: center;
-    border-bottom: solid 1px #333;
-}
-nav {
-    font-size: small;
-    text-align: center;
-}
 
 .navbar {
     /*background-color: #0063c6;*/
@@ -159,3 +147,18 @@ nav {
 #FOOTER-SIDE a:hover {text-decoration: underline; color:#A00;}
 #dd-1em {display: inline-block; text-align: left;}
 #dd-1em dd {margin-left: 1rem;}
+header {
+    width: 100%;
+    background-image:  url(/images/logo.png);
+    background-size: 4.2rem;
+    background-repeat:  no-repeat;
+    text-align: center;
+    border-bottom: solid 1px #333;
+    margin: 0 auto 2em;
+    background-color: LIME;
+}
+nav {
+    font-size: small;
+    text-align: center;
+    background-color: AQUA;
+}
