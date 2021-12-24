@@ -20,9 +20,9 @@ License: Proprietary - No Licence Granted
 
 ## Requirements
 
-* PHP Version <=7.4
+* PHP Version >=7.4
 * Apache2 with mod_rewrite and SSL enabled
-* Composer
+* REDUNDANT??? - Composer 
 * HTTPS
 * Mail Server
 

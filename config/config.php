@@ -38,7 +38,7 @@ define('DB_CONNECTION', 'dev-mysql'); // dev-mysql or prod-mysql
 // Dates & Times
 //----------------------------------------------------------------------------------------
 
-date_default_timezone_set('America/Los_Angeles');
+date_default_timezone_set('Asia/Bangkok');
 
 // MySQL Datetime. Format: 2010-07-15 16:33:56
 define('MYSQL_DATETIME_TODAY', date('Y-m-d H:i:s'));
@@ -110,6 +110,8 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 //----------------------------------------------------------------------------------------
 
 define('BASEDIR', dirname(__DIR__));
+define('VIEWS', BASEDIR .'/resources');
+define('LOCALHOST', 'localhost'===$_SERVER['SERVER_NAME']);
 
 require BASEDIR . '/app/debug/debug.php';
 require BASEDIR . '/app/actions/actions.php';
