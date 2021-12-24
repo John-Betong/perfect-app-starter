@@ -1,2 +1,4 @@
 INFO.php 
-config/
+config/config.php
+config/dbConfig.php
+logs/error.log
