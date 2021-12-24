@@ -1,6 +1,22 @@
+<!-- 
 <p class="text-center">
-    <a href="login">Login</a> | <a href="register">Register</a> | <a href="v1">User API</a> | <a href="about">About</a> | <a href="contact">Contact</a>
+    <a href="login">
+        Login
+    </a> | 
+    <a href="register">
+        Register</a> | 
+     <a href="v1">
+        User API
+    </a> | 
+    <a href="about">
+        About
+    </a> | 
+    <a href="contact">
+        Contact
+    </a>
 </p>
+-->
+<?php require VIEWS .'/partials/menu-subs.php'; ?>
 
 <div class="text-center">
     <h1>Perfect App Framework</h1>
@@ -12,3 +28,4 @@
         <h3>Contributors</h3>
         <cite>Kevin Rubio<br>John Betong</cite>
     </div>
+</div><!-- ADDED MISSING DIV -->    

@@ -110,7 +110,7 @@ if (version_compare(PHP_VERSION, '7.4') < 0)
 //----------------------------------------------------------------------------------------
 
 define('BASEDIR', dirname(__DIR__));
-define('VIEWS', BASEDIR .'/resources');
+define('VIEWS', BASEDIR .'/resources/views/');
 define('LOCALHOST', 'localhost'===$_SERVER['SERVER_NAME']);
 
 require BASEDIR . '/app/debug/debug.php';

@@ -2,9 +2,10 @@
 
 /* Page Routes */
 
-$router->get('', 'Pages\PagesController@index');
-$router->get('about', 'Pages\PagesController@about');
+$router->get('',        'Pages\PagesController@index');
+$router->get('about',   'Pages\PagesController@about');
 $router->get('contact', 'Pages\PagesController@contact');
+$router->get('rtfm',    'Pages\PagesController@rtfm');
 
 //----------------------------------------------------------------------------------------
 //  Registration Routes

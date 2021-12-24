@@ -18,7 +18,24 @@ class PagesController
     final public function contact(): void
     {
         $company = 'Perfect App';
-        view('layouts/layout', ['templatePage' => 'pages/contact', 'company' => $company]);
+        view(
+            'layouts/layout', 
+            [
+                'templatePage'  => 'pages/contact', 
+                'company'       => $company
+            ]
+        );
+    }
+    final public function rtfm(): void
+    {
+        $rtfm = 'Read the Flipping Manual';
+        view(
+            'layouts/layout',
+            [
+                'templatePage'  => 'pages/rtfm', 
+                'company'       => $rtfm
+            ]
+        );
     }
 
     final public function dashboard(): void
