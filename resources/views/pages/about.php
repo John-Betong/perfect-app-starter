@@ -1,17 +1,21 @@
 <?php declare(strict_types=1);
 
-echo '<header>';
-  echo '<h1>' .APP_NAME .'</h1>';
-  require VIEWS .'/partials/menu-subs.php';
-echo '</header>';
+  $tmpApp = APP_NAME;
 
- echo '<h3>
-          A Proprietary Non-Opinionated Framework
-           Implementing Best Practices
-       </h3>
-      '
-      ;
-
-/*
-<a href="/">Back</a>
-*/
+  echo $tmp = <<< ____EOT
+    <header id="mini">
+      <h1> $tmpApp </h1>
+      <nav>
+____EOT;
+      require VIEWS .'/partials/menu-subs.php';
+  echo $tmp = <<< ____EOT
+      </nav>  
+    </header>
+    <section>
+      <h2> About </h2>
+      <h3>
+        A Proprietary Non-Opinionated Framework
+             Implementing Best Practices
+      </h3>
+    </section>  
+____EOT;

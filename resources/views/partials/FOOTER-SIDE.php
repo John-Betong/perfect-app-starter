@@ -24,6 +24,9 @@ ____EOT;
 }//
 
 # ====== GetLinks ==> v001, v002, v003, v004 ==================
+  $tLink  = 'debug' ;  
+  $v000   = getLink($tLink, 'Debug');
+
   $tLink  = 'https://validator.w3.org/nu/?doc=' .$vEnc ;  
   $v001   = getLink($tLink, 'HTML');
 
@@ -59,6 +62,8 @@ ____EOT;
   $tmp = <<< ____EOT
     \n\n
     <div id="FOOTER-SIDE">
+        $v000
+        &nbsp;&nbsp;
         $v001
         &nbsp;&nbsp;
         $v002 

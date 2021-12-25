@@ -8,7 +8,6 @@ $aPages = [
 	'about'    => 'About',
 	'contact'  => 'Contact',
   'rtfm'     => 'RTFM',
-  'debug_show' => 'DEBUG Show',
 ];
 
 $items = '';
@@ -23,14 +22,4 @@ $items = '';
       </a>  
 ____EOT;
   endforeach;
-
-echo $tmp = <<< ____EOT
-    <nav> $items   </nav>
-____EOT;
-
-/*
-  <header>
-    <h1>  $company </h1>
-  </header>
-*/
-
+  echo $items;

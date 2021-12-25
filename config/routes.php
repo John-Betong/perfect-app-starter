@@ -2,11 +2,11 @@
 
 /* Page Routes */
 
-$router->get('',          'Pages\PagesController@index');
-$router->get('about',     'Pages\PagesController@about');
-$router->get('contact',   'Pages\PagesController@contact');
-$router->get('rtfm',      'Pages\PagesController@rtfm');
-$router->get('debug_show','Pages\PagesController@debug_show');
+$router->get('',        'Pages\PagesController@index');
+$router->get('about',   'Pages\PagesController@about');
+$router->get('contact', 'Pages\PagesController@contact');
+$router->get('rtfm',    'Pages\PagesController@rtfm');
+$router->get('debug',   'Pages\PagesController@debug');
 
 //----------------------------------------------------------------------------------------
 //  Registration Routes

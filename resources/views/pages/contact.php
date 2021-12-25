@@ -1,10 +1,20 @@
 <?php declare(strict_types=1);
 
-echo '<header>';
-  echo '<h1>' .$company .'</h1>';
-  require VIEWS .'/partials/menu-subs.php';
-echo '</header>';
+  $tmpApp = APP_NAME;
 
-echo '<h2> Contact Us</h2>';
+  echo $tmp = <<< ____EOT
+      <header id="mini">
+      <h1> $tmpApp </h1>
+      <nav>
+____EOT;
+      require VIEWS .'/partials/menu-subs.php';
+
+  echo $tmp = <<< ____EOT
+      </nav>  
+    </header>
+    <section>
+      <h2> Contact us </h2>
+    </section>  
+____EOT;
 
 

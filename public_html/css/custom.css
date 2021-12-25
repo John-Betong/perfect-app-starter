@@ -1,7 +1,14 @@
+:root {
+    --gpa: SLATE; /* GRANDPA */
+    --dad: #FBBC05;
+    --son: #34A853;
+    --bby: #EA4335;
+    --wht: WHITE; 
+    --blk: BLACK; 
+  } 
 /* Set padding for between navbar and main container content */
 body {
   /*padding-top: 70px;// For Nav Bar*/
-  width: 88%; margin: 0 auto;
 }
 
 .navbar {
@@ -149,16 +156,21 @@ body {
 #dd-1em dd {margin-left: 1rem;}
 header {
     width: 100%;
-    background-image:  url(/images/logo.png);
-    background-size: 4.2rem;
-    background-repeat:  no-repeat;
     text-align: center;
     border-bottom: solid 1px #333;
     margin: 0 auto 2em;
-    background-color: LIME;
+    background-color: var(--gpa);
 }
-nav {
+header nav a {
+    color: AQUA;
     font-size: small;
-    text-align: center;
-    background-color: AQUA;
+}
+header #mini {
+    background-image: url(/images/logo.png);
+    background-size: 7.0rem;
+    background-repeat: no-repeat;
+    background-color: var(--dad);
+}
+section {
+    width: 88%; margin: 0 auto;
 }

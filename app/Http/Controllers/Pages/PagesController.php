@@ -28,17 +28,17 @@ class PagesController
     }
     final public function rtfm(): void
     {
-        $rtfm = 'Read the Flipping Manual';
+        $rtfm = 'The Manual';
         view(
             'layouts/layout',
             [
-               'templatePage'  => 'pages/rtfm', 
+                'templatePage'  => 'pages/rtfm', 
                 'company'       => $rtfm
             ]
         );
     }
 
-    final public function debug_show(): void
+    final public function debug(): void
     {
         $debugShow = 'DEBUGGING IS ON';
         view(
