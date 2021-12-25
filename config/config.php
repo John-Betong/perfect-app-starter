@@ -17,10 +17,10 @@
 //----------------------------------------------------------------------------------------
 
 define('APP_NAME', 'Perfect App Starter');
-define('VERSION', 'v.3.0');
+define('VERSION',  'v.3.0');
 
-define('ADMIN_EMAIL_TO', 'admin@example.com');
-define('ADMIN_EMAIL_FROM', 'DoNotReply@example.com');
+define('ADMIN_EMAIL_TO', 'ajrutherford@gmail.com');
+define('ADMIN_EMAIL_FROM', 'john.betong@gmail.com');
 
 //----------------------------------------------------------------------------------------
 // Application Url
